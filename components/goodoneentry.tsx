@@ -49,7 +49,7 @@ const FlashCardOneEntry = ({
       SetAffichage(question);
       setShow(true);
     }
-  }, [click, mentaleFlashCardData, question, response]);
+  }, [click, input, mentaleFlashCardData, question, response]);
 
   if (show === true) {
     return (
@@ -83,7 +83,6 @@ const FlashCardOneEntry = ({
         <br />
         <button
           onClick={() => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
             setQuestion(mentaleFlashCardData[randomNumber].question),
               setResponse(mentaleFlashCardData[randomNumber].answer),
               setRandomNumber(numberAleatoire(0, 2));

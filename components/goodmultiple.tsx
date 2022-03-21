@@ -51,7 +51,7 @@ const FlashCardResponseMultiple = ({
       setReponseFinal("Mauvaise réponse");
       setcssResponse("red-text-class");
     }
-  }, [affichage, click, mentaleFlashCardData, number, question]);
+  }, [affichage, click, input, mentaleFlashCardData, question]);
   if (show === true) {
     return (
       <div className="Contour">
@@ -61,10 +61,11 @@ const FlashCardResponseMultiple = ({
           <br />
           {response.map((element) => {
             return (
+              // eslint-disable-next-line react/jsx-key
               <div>
                 <input
                   type="checkbox"
-                  onChange={(event) => setInput(`${element}`)}
+                  onChange={() => setInput(`${element}`)}
                 />
                 <label className="form-check-label">{element}</label>
               </div>
