@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 import Layout from "../components/layout";
 import FlashCardResponseMultiple from "../components/goodmultiple";
 import { arrayData } from "../data/questionanswer";
